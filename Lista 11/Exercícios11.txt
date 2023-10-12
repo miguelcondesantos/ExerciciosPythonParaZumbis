@@ -1,0 +1,68 @@
+#!/usr/bin/python -tt
+# Copyright 2010 Google Inc.
+# Licensed under the Apache License, Version 2.0
+# http://www.apache.org/licenses/LICENSE-2.0
+
+# Google's Python Class
+# http://code.google.com/edu/languages/google-python-class/
+# Exercícios básicos com strings
+
+# A. donuts
+# Para um inteiro n retorna uma string na forma 'Número de donuts: <n>'
+# onde n é o valor passado como argumento.
+# Caso n >= 10 devo retornar 'muitos' em lugar do número.
+# donuts(5) returns 'Número de donuts: 5'
+# donuts(23) returns 'Número de donuts: muitos'
+def donuts(n):
+  if n >= 10:
+    return 'Número de donuts: muitos'
+  else:
+    return 'Número de donuts: %s' % n
+
+
+# B. pontas
+# Dada uma string s, retorna uma string com as duas primeiras e as duas
+# últimas letras da string original s
+# Assim 'palmeiras' retorna 'paas'
+# No entanto, se a string tiver menos que 2 letras, retorna uma string vazia
+def pontas(s):
+  if len(s) < 2:
+    return ''
+  else:
+     return s[:2] + s[-2:]
+
+# C. fixa_primeiro
+# Dada uma string s, retorna uma string onde todas as ocorrências
+# do primeiro caracter são trocados por '*', exceto para o primeiro
+# Assim 'abacate' retorna 'ab*c*te'
+# Dica: use s.replace(stra, strb) 
+def fixa_primeiro(s):
+  return s[0] + s[1:].replace(s[0], '*')
+
+# D. mistura2
+# Sejam duas strings a e b
+# Retorno uma string '<a> <b>' separada por um espaço
+# com as duas primeiras letras trocadas de cada string 
+#   'mix', pod' -> 'pox mid'
+#   'dog', 'dinner' -> 'dig donner'
+def mistura2(a, b):
+  a_trocado = b[:2] + a[2:]
+  b_trocado = a[:2] + b[2:]
+  return a_trocado + ' ' + b_trocado
+
+
+# E. palindrome
+# Verifique se uma string é palíndrome
+#   palindrome('asa') True
+#   palindrome('casa') False 
+def palindrome(s):
+  return s == s[::-1]
+
+# F. busca
+# Verifique quantas ocorrências de uma palavra há numa frase
+# frase = 'ana e mariana gostam de banana'
+# palavra = 'ana'
+# busca ('ana e mariana gostam de banana', 'ana') == 4
+def busca(frase, palavra):
+  return len([k for k in range(len(frase))
+    if frase[k:k+len(palavra)] == palavra])

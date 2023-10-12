@@ -1,0 +1,69 @@
+1
+a,b,c= [int(x) for x in input("Insira os valores dos lados do triângulo: ").split()]
+if a==b==c:
+    print("Triângulo equilátero")
+elif a==b or a==c or b==c:
+    print("Triângulo isósceles")
+else:
+    print("Triângulo escaleno")
+
+2
+ano=int(input("Coloque um ano para verificar se é bissexto ou não: "))
+if ano%400==0 or ano%4==0 and ano%100!=0:
+    print("Ano bissexto")
+else:
+    print("Não é bissexto")
+
+3
+peso=float(input("Quantos quilos por você foram pescados?: "))
+if peso>50:
+    print("Multa a se pagar pelo excesso: " f"R${(peso-50)*4:.2f}")
+else:
+    print("Sem multa :)")
+
+4
+q,w,e=[float(x) for x in input("Insira 3 números: ").split()]
+if q>w or q>e:
+    print("O primeiro número é maior:" f"{q:.1f}")
+elif w>e:
+    print("O segundo número é maior: " f"{w:.1f}")
+else:
+    print("O terceiro número é maior :" f"{e:.1f}")
+
+5
+q,w,e=[float(x) for x in input("Insira 3 números: ").split()]
+maior=q
+if w>q and w>e:
+    maior=w
+if e>q and e>w:
+    maior=e
+menor=q
+if w<e and w<q:
+    menor=w
+if e<w and e<q:
+    menor=e
+print("Menor e maior número respectivamente: "f"{menor:.1f}",f"{maior:.1f}")
+
+6
+ganho=float(input("Quanto você ganha por hora?: "))
+horas=float(input("Por quantas horas você trabalha no mês?: "))
+
+salario=ganho*horas
+
+print("Salário bruto: R$",salario)
+ir=0.11*salario
+print("IR: " f"R${ir:.2f}")
+inss=0.8*salario
+print("INSS: " f"R${inss:.2f}")
+sindicato=0.5*salario
+print("Sindicato: " f"R${sindicato:.2f}")
+print("Salário Líquido: " f"R${(salario-(ir+inss+sindicato))*-1:.2f}")
+
+7
+metros=float(input("Qual o tamanho da área a ser pintada em metros quadrados?: "))
+
+litros=metros/3
+latas = litros/18
+
+print("Serão usadas",f"{latas:.2f}","latas de tinta")
+print("O preco total é de: ",f"R${latas*80:.2f}")

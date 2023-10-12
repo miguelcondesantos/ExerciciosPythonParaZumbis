@@ -1,0 +1,57 @@
+1
+x, y = [int(x) for x in input("Insira dois números inteiros: ").split()]
+print("A soma total dos números é: ", x+y)
+
+2
+metros = float(input("Insira um valor em metros: "))
+print("centímetros: ", metros*100)
+
+3
+d, h, m, s = [int(x) for x in input("Insira dias, horas, minutos e segundos: ").split()]
+print("Total de segundos: ", (d*86400)+(h*3600)+(m*60)+s)
+
+4
+salario = float(input("Insira seu salário: "))
+aumento = float(input("Insira a porcentagem do aumento: "))
+aumento = (aumento/100)+1
+print("O aumento foi de: ",aumento)
+print("O slário atual agora é: ",f'R${salario+aumento:.2f}')
+
+5
+mercadoria = float(input("Insira o preço da mercadoria: "))
+desconto = float(input("Insira o percentual do desconto: "))
+desconto = (desconto*mercadoria)/100
+print("Preço a pagar: ", f'R${mercadoria-desconto:.2f}')
+
+6
+distancia = float(input("Qual a distância a percorrer?: "))
+vm = float(input("Qual a velocidade média esperada pra viagem?: "))
+print("O tempo para viagem de carro é: ",f'{vm/distancia:.2f} horas'
+
+7
+temperaturaC = float(input("Qual a temperatura atual em Celsius?: "))
+coverterF = (9*temperaturaC)/(5+32)
+print("Temperatura em Fahrenheit: ",f'{coverterF:.2f}F')
+
+8
+temperaturaF = float(input("Qual a temperatura atual em Fahrenheit?: "))
+coverterC = (temperaturaF-32)*(5/9)
+print("Temperatura em Celsius: ",f'{coverterC:.2f}C')
+
+9
+kmpercorridos = float(input("Quantos Km o carro já percorreu?: "))
+diasalugados = int(input(" A quantos dias ele foi alugado?: "))
+pagar = (kmpercorridos*0.15)+(diasalugados*60)
+print("O preço a pagar é: ",f'R${pagar:.2F}')
+
+10
+cigarros = int(input("Qunatos cigarros você fuma por dia?: "))
+anos = int(input("A quatos anos você fuma?: "))
+diasdevidaperdidos = (1440*cigarros)*anos
+print("Dias totais de vida perdidos: ", f'{diasdevidaperdidos*365} ;-;')
+
+11
+import sys
+sys.set_int_max_str_digits(10000000)
+x=str(int(2**1000000))
+print(len(x))

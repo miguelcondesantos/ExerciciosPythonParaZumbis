@@ -1,0 +1,39 @@
+1
+nota=float(input("Insira a nota, ela deve ser entre 0 e 10: "))
+while nota<0 or nota>10:
+    nota=float(input("Insira a nota, ela deve ser entre 0 e 10: "))
+
+2
+usuario=int,str(input("Insira seu usuário: "))
+senha=int,str(input("Insira sua senha: "))30
+while usuario==senha:
+    print("Nome de usuário igual a senha, insira novamente")
+    usuario=int,str(input("Insira seu usuário: "))
+    senha=int,str(input("Insira sua senha: "))
+
+3
+a=80000
+b=200000    
+ano=0
+while a<=b:
+    a=a+(a*0.03)
+    b=b+(b*0.015)
+    ano=ano+1
+print("A quantidade de anos necessário para que A ultrapasse B são: ",ano)
+
+4
+n=int(input("Veja seu número de Fibonacci: "))
+x,y=1,1
+z=1
+
+while z<=n-2:
+    x,y=y,x+y
+    z=z+1
+print(y)
+
+5
+u,i=[float(x) for x in input("Insira dois números inteiros: ").split()]
+
+while u%i!=0:
+    u,i=i,u%i
+print(f'{i:.1f}')
